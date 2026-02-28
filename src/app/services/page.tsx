@@ -10,7 +10,7 @@ export const metadata = {
 const services = [
     {
         title: "Premium Business Portfolios",
-        description: "I build modern, fast, and beautiful websites that help business owners and entrepreneurs show off their work, tell their story, and attract more clients online at a very affordable rate.",
+        description: "I build modern, fast, and beautiful websites that help business owners and entrepreneurs show off their work, tell their story, and attract more clients online at affordable rates. Create a stunning professional website for just ₹1299!",
         icon: <BriefcaseBusiness className="w-8 h-8 text-orange-400" />,
     },
     {
