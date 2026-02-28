@@ -9,6 +9,11 @@ export const metadata = {
 
 const services = [
     {
+        title: "Premium Business Portfolios",
+        description: "I build modern, fast, and beautiful websites that help business owners and entrepreneurs show off their work, tell their story, and attract more clients online.",
+        icon: <BriefcaseBusiness className="w-8 h-8 text-orange-400" />,
+    },
+    {
         title: "AI & Machine Learning Integrations",
         description: "Custom AI solutions, generative models, OpenAI API integrations, and robust data pipelines to automate tasks and unlock insights from complex datasets.",
         icon: <Cpu className="w-8 h-8 text-cyan-400" />,
@@ -27,11 +32,6 @@ const services = [
         title: "Automation & Data Engineering",
         description: "Replacing manual and repetitive tasks with headless workflows, automated scripts, and CI/CD pipelines to skyrocket efficiency and reduce operational friction.",
         icon: <Database className="w-8 h-8 text-emerald-400" />,
-    },
-    {
-        title: "Premium Business Portfolios",
-        description: "High-converting, bespoke, and lightning-fast portfolio websites designed to establish robust digital presence for driven entrepreneurs and established business leaders.",
-        icon: <BriefcaseBusiness className="w-8 h-8 text-orange-400" />,
     },
     {
         title: "Advanced UI/UX Implementation",
