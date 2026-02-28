@@ -92,6 +92,9 @@ export default function Projects() {
                             transition={{ delay: i * 0.1, duration: 0.6 }}
                             className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500"
                         >
+                            {/* Make entire card clickable */}
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
+
                             <div className="relative w-full aspect-video overflow-hidden">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
@@ -114,7 +117,7 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <div className="flex items-center gap-4 pt-4 border-t border-white/10">
+                                <div className="flex items-center gap-4 pt-4 border-t border-white/10 relative z-20">
                                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
                                         <ExternalLink size={16} /> Live Demo
                                     </a>
