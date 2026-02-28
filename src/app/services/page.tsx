@@ -10,8 +10,10 @@ export const metadata = {
 const services = [
     {
         title: "Premium Business Portfolios",
-        description: "I build modern, fast, and beautiful websites that help business owners and entrepreneurs show off their work, tell their story, and attract more clients online at affordable rates. Create a stunning professional website for just ₹1299!",
+        description: "I build modern, fast, and beautiful websites that help business owners and entrepreneurs show off their work, tell their story, and attract more clients online.",
         icon: <BriefcaseBusiness className="w-8 h-8 text-orange-400" />,
+        highlight: "At affordable rates",
+        price: "Just ₹1299",
     },
     {
         title: "AI & Machine Learning Integrations",
@@ -77,6 +79,21 @@ export default function ServicesPage() {
                                 <p className="text-white/60 leading-relaxed flex-grow">
                                     {service.description}
                                 </p>
+
+                                {(service.highlight || service.price) && (
+                                    <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
+                                        {service.highlight && (
+                                            <span className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold uppercase tracking-wider">
+                                                {service.highlight}
+                                            </span>
+                                        )}
+                                        {service.price && (
+                                            <span className="px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-bold">
+                                                {service.price}
+                                            </span>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
