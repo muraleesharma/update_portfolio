@@ -4,22 +4,12 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        role: "Senior Full Stack Developer",
-        company: "Tech Innovators Inc",
-        period: "2024 - Present",
-        description: "Leading the development of high-performance web applications and backend AI integrations. Optimized system architecture to reduce latency by 40%.",
+        company: "Zoho Corporation",
+        period: "2021 - 2025",
     },
     {
-        role: "AI / Data Engineer",
-        company: "Data & Tech Agency",
-        period: "2022 - 2024",
-        description: "Built robust data pipelines and AI-driven models using Python, processing large-scale datasets and optimizing algorithms for precision and efficiency.",
-    },
-    {
-        role: "Mobile App Developer",
-        company: "Freelance / Indie Hacker",
-        period: "2020 - 2022",
-        description: "Designed and launched multiple 5-star Flutter applications with complex state management and seamless UI/UX.",
+        company: "NVH India Autoparts",
+        period: "2019 - 2021",
     },
 ];
 
@@ -45,11 +35,9 @@ export default function Experience() {
                             {/* Timeline dot */}
                             <div className="absolute left-[-5px] md:left-[-5px] top-1 w-[11px] h-[11px] rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.5)] z-10" />
 
-                            <div className="glass-card p-8 rounded-2xl md:ml-8 hover:bg-white/5 transition-colors border border-white/5">
-                                <span className="text-cyan-400 text-sm font-mono mb-2 block">{exp.period}</span>
-                                <h4 className="text-2xl font-bold text-white mb-1">{exp.role}</h4>
-                                <h5 className="text-xl text-white/50 mb-4 font-medium">{exp.company}</h5>
-                                <p className="text-white/70 leading-relaxed">{exp.description}</p>
+                            <div className="glass-card p-6 rounded-2xl md:ml-8 hover:bg-white/5 transition-colors border border-white/5 flex flex-col md:flex-row md:items-center justify-between">
+                                <h4 className="text-2xl font-bold text-white mb-1 md:mb-0">{exp.company}</h4>
+                                <span className="text-cyan-400 text-lg font-mono">{exp.period}</span>
                             </div>
                         </motion.div>
                     ))}

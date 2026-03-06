@@ -3,73 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-type Project = {
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-    liveUrl: string;
-    githubUrl: string;
-};
-
-const projects: Project[] = [
-    {
-        title: "ResumeReady.in - Free resume builder",
-        description: "A full working Resume builder application that allows users to create, customize, and download professional resumes seamlessly.",
-        image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
-        tags: ["Next.js", "React", "Tailwind"],
-        liveUrl: "https://resumeready.in/",
-        githubUrl: "#",
-    },
-    {
-        title: "Reels Creation Automation Tool using AI",
-        description: "A complete automation pipeline that uses generative AI tools to script, generate, and edit engaging short-form video reels without manual intervention.",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
-        tags: ["Python", "OpenAI API", "FFmpeg", "Automation"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-    {
-        title: "Personalized Business Portfolio Websites",
-        description: "High-converting, bespoke portfolio websites designed specifically for entrepreneurs and businessmen, built with sleek modern aesthetics.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        tags: ["React", "Next.js", "Tailwind CSS"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-    {
-        title: "NSE Swing Trading Intelligence Platform",
-        description: "An advanced algorithmic trading platform tailored for NSE, integrating real-time market data, predictive AI models, and automated execution APIs for quantitative swing strategies.",
-        image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800",
-        tags: ["Python", "Django", "React", "WebSockets"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-    {
-        title: "Behavioral Pattern Analyzer (Trader Personality Engine)",
-        description: "A data-driven engine that analyzes historical trading behaviors and psychological patterns to generate personalized insights for traders, improving discipline and consistency.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        tags: ["Python", "Data Science", "Machine Learning"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-    {
-        title: "AI Trading Psychology Lab (Simulation Engine)",
-        description: "An interactive simulation environment designed to test and refine trading psychology under pressure, utilizing AI to replicate live market conditions.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-        tags: ["Next.js", "AI Integrations", "Framer Motion"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-    {
-        title: "System & Work Automation Solutions",
-        description: "Custom-built internal automation scripts and headless workflows engineered to replace repetitive manual tasks, driving operational efficiency across enterprise environments.",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-        tags: ["Python", "Node.js", "Cron", "DevOps"],
-        liveUrl: "#",
-        githubUrl: "#",
-    },
-];
+import { projects } from "../data/projects";
 
 export default function Projects() {
     return (
@@ -93,7 +27,7 @@ export default function Projects() {
                             className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500"
                         >
                             {/* Make entire card clickable */}
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
+                            <a href={project.id === "resume-ready" ? project.liveUrl : `/project/${project.id}`} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
 
                             <div className="relative w-full aspect-video overflow-hidden">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}

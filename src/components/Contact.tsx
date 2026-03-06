@@ -21,29 +21,47 @@ export default function Contact() {
                         Currently open for freelance projects. Whether you have a project to discuss or just want to say hi, my inbox is open.
                     </p>
 
-                    <form className="max-w-md mx-auto space-y-4 mb-16 text-left" onSubmit={(e) => e.preventDefault()}>
+                    <form
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        action="/success"
+                        className="max-w-md mx-auto space-y-4 mb-16 text-left"
+                    >
+                        {/* Hidden input for Netlify Form name */}
+                        <input type="hidden" name="form-name" value="contact" />
+
                         <div>
                             <input
                                 type="text"
+                                name="name"
+                                required
                                 placeholder="Name"
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all font-medium"
                             />
                         </div>
                         <div>
                             <input
                                 type="email"
+                                name="email"
+                                required
                                 placeholder="Email"
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all font-medium"
                             />
                         </div>
                         <div>
                             <textarea
+                                name="message"
+                                required
                                 placeholder="Message"
                                 rows={4}
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all resize-none"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all resize-none font-medium"
                             ></textarea>
                         </div>
-                        <button className="w-full bg-white text-black font-semibold py-4 rounded-xl hover:bg-white/90 transition-transform active:scale-[0.98]">
+                        <button
+                            type="submit"
+                            className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-cyan-500 hover:text-white transition-all active:scale-[0.98] shadow-lg shadow-white/5"
+                        >
                             Send Message
                         </button>
                     </form>

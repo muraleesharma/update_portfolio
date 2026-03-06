@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased bg-black text-white min-h-screen selection:bg-white/20 selection:text-white`}>
         {/* Ambient global glow */}
         <div className="fixed inset-0 z-[-1] min-h-screen items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#1a1025_100%)]"></div>
