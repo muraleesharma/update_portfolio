@@ -62,7 +62,7 @@ export default function SuccessPage() {
                     </Link>
                 </motion.div>
 
-                {/* Fun Caricature Micro-moment */}
+                {/* Micro-moment */}
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function SuccessPage() {
                 >
                     <div className="relative">
                         <img
-                            src="/muralee-caricature.jpg"
+                            src="/muralee-new-portrait.png"
                             alt="Muralee G"
                             className="w-32 h-32 rounded-3xl object-cover border border-white/20 shadow-2xl rotate-3"
                         />

@@ -150,7 +150,7 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* Caricature Image Content */}
+                {/* Portrait Image Content */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8, x: 50 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -164,8 +164,8 @@ export default function Hero() {
 
                         <div className="relative glass-card p-2 rounded-[2.5rem] overflow-hidden border border-white/10 max-w-[400px] md:max-w-md shadow-2xl">
                             <img
-                                src="/muralee-caricature.jpg"
-                                alt="Muralee G Caricature"
+                                src="/muralee-new-portrait.png"
+                                alt="Muralee G Portrait"
                                 className="w-full h-auto rounded-[2rem] object-cover transition-transform duration-500"
                             />
                         </div>

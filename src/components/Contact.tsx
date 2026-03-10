@@ -70,7 +70,12 @@ export default function Contact() {
                         <a href="mailto:example@email.com" className="p-4 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all">
                             <Mail size={24} />
                         </a>
-                        <a href="#" className="p-4 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all">
+                        <a
+                            href="https://in.linkedin.com/in/muralee-sharma-89a596116?trk=public_profile_samename_profile_profile-result-card_result-card_full-click"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-4 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+                        >
                             <Linkedin size={24} />
                         </a>
                         <a href="#" className="p-4 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all">
